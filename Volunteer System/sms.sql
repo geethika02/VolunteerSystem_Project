@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 08, 2020 at 11:48 AM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.2.26
+-- Generation Time: Apr 30, 2021 at 02:34 PM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -40,7 +39,7 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`s_no`, `name`, `email`, `password`) VALUES
-(1, 'Admin', 'admin@gmail.com', 'admin@123');
+(1, 'Geethika', 'geethikavsr@gmail.com', 'geethika123');
 
 -- --------------------------------------------------------
 
@@ -50,11 +49,11 @@ INSERT INTO `login` (`s_no`, `name`, `email`, `password`) VALUES
 
 CREATE TABLE `students` (
   `s_no` int(11) NOT NULL,
-  `roll_no` int(11) NOT NULL,
+  `roll_no` varchar(16) NOT NULL,
   `name` varchar(100) NOT NULL,
   `father_name` varchar(100) NOT NULL,
-  `class` int(11) NOT NULL,
-  `mobile` varchar(25) NOT NULL,
+  `class` varchar(100) NOT NULL,
+  `mobile` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `remark` varchar(250) NOT NULL
@@ -65,10 +64,9 @@ CREATE TABLE `students` (
 --
 
 INSERT INTO `students` (`s_no`, `roll_no`, `name`, `father_name`, `class`, `mobile`, `email`, `password`, `remark`) VALUES
-(5, 1002, 'Pramod Sharma', 'Sohan Sharma', 10, '659874512', 'pramod@gmail.com', 'pramod@123', 'He is an intelligent guy.'),
-(7, 1001, 'Vinod Meena', 'XYZ', 12, '1234567789', 'vinod@gmail.com', 'vinod@123', 'Fine'),
-(11, 1004, 'Mohan', 'Sohan', 12, '254587458', 'mohan@gmail.com', 'mohan@123', 'Great boy'),
-(12, 1004, 'Mohan', 'Sohan', 12, '254587458', 'mohan@gmail.com', 'mohan@123', 'Great boy');
+(24, '1', 'hjaewfh', 'khegf', '3289', '2532656', 'kkk@gmail.com', '123', 'av;kfyhi'),
+(25, '123', 'kuagd', 'uaef', '73564', '874764', 'ii@gmail.com', '123', 'yfj,h dsvc'),
+(26, '123', 'K.Arjun', 'Govt. Employee', '12345', '1234567890', 'arjun@gmail.com', '123', 'Not applicable');
 
 -- --------------------------------------------------------
 
@@ -89,9 +87,9 @@ CREATE TABLE `teachers` (
 --
 
 INSERT INTO `teachers` (`s_no`, `t_id`, `name`, `mobile`, `courses`) VALUES
-(1, 101, 'Shivam Yadav', '5484654878', 'Physics, Maths'),
-(2, 102, 'Gopal Sharma', '9878452484', 'English, Reasoning, History'),
-(103, 103, 'Hariom sain', '7887451254', 'Politics, History, Biology ');
+(1, 101, 'Shivam Prasad', '5484654878', 'Sheelanagar'),
+(2, 102, 'Gopal Krishna', '9878452484', 'Gajuwaka'),
+(103, 103, 'Rama Prasad', '7887451254', 'Pendhurthi');
 
 --
 -- Indexes for dumped tables
@@ -129,7 +127,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `students`
 --
 ALTER TABLE `students`
-  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `s_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `teachers`
